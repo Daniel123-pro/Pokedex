@@ -1,0 +1,21 @@
+.encabezado {
+  background-color: #db4b4b;
+  color: white;
+  width: 100%;
+  position: fixed;
+  padding: 10px;
+  z-index: 200; }
+  .encabezado h1 {
+    margin: 0;
+    user-select: none; }
+
+.p {
+  display: flex;
+  position: fixed;
+  border-radius: 2px 2px 2px 2px;
+  background-color: #db4b4b;
+  height: 200px;
+  width: 30px;
+  top: 100px;
+  left: -10px;
+  z-index: 10; }
