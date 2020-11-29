@@ -25,3 +25,14 @@
     left: -10px;
     z-index: 10;
 }
+
+.p2 {
+    display:flex;
+    position: fixed;
+    border-radius: 0px 10px 10px 0px;
+    height: 200px;
+    width: 50px;
+    background-color: $color-standar;
+    top:100px;
+    left: 25px;
+}
