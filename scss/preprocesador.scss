@@ -35,4 +35,35 @@
     background-color: $color-standar;
     top:100px;
     left: 25px;
+    z-index: 10;
+    align-items: center;
+    justify-items: center;
+    .arrow{
+        display: flex;
+        height: 30px;
+        width:30px;
+        z-index: 20;
+        margin:auto;
+        transition: all 0.3s;
+        border: 3px solid $letra;
+        align-items: center;
+        justify-items: center;
+        border-radius: 7px 7px 7px 7px;
+        div{
+            clip-path: polygon(100% 50%, 0 0, 0 100%);
+            background: $letra;
+            height: 15px;
+            width:15px;
+            z-index: 20;
+            margin:0 auto;
+            transition: all 0.1s;
+        }
+
+        &:active {
+            border-color: lightgray;
+            div {
+                background: lightgray;
+            }
+        }
+    }
 }

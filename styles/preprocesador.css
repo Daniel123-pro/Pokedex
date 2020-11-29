@@ -28,4 +28,30 @@
   width: 50px;
   background-color: #db4b4b;
   top: 100px;
-  left: 25px; }
+  left: 25px;
+  z-index: 10;
+  align-items: center;
+  justify-items: center; }
+  .p2 .arrow {
+    display: flex;
+    height: 30px;
+    width: 30px;
+    z-index: 20;
+    margin: auto;
+    transition: all 0.3s;
+    border: 3px solid white;
+    align-items: center;
+    justify-items: center;
+    border-radius: 7px 7px 7px 7px; }
+    .p2 .arrow div {
+      clip-path: polygon(100% 50%, 0 0, 0 100%);
+      background: white;
+      height: 15px;
+      width: 15px;
+      z-index: 20;
+      margin: 0 auto;
+      transition: all 0.1s; }
+    .p2 .arrow:active {
+      border-color: lightgray; }
+      .p2 .arrow:active div {
+        background: lightgray; }
