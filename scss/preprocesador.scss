@@ -38,6 +38,7 @@
     z-index: 10;
     align-items: center;
     justify-items: center;
+    transition: left 0.3s;
     .arrow{
         display: flex;
         height: 30px;
@@ -49,21 +50,86 @@
         align-items: center;
         justify-items: center;
         border-radius: 7px 7px 7px 7px;
-        div{
+        button{
             clip-path: polygon(100% 50%, 0 0, 0 100%);
+            position: absolute;
             background: $letra;
             height: 15px;
             width:15px;
             z-index: 20;
             margin:0 auto;
             transition: all 0.1s;
+            outline: none;
+            border: none;
+            left: 17px;
+        }
+        .n2 {
+            position: absolute;
+            clip-path: polygon(0 50%, 100% 100%, 100% 0);
+            background: $letra;
+            height: 15px;
+            width:15px;
+            margin:0 auto;
+            transition: all 0.1s;
+            outline: none;
+            border: none;
+            z-index: 20;
         }
 
         &:active {
             border-color: lightgray;
-            div {
+            button {
                 background: lightgray;
             }
         }
     }
+}
+
+.buscador {
+    display: flex;
+    height: 180px;
+    background-color: $partes_oscuras;
+    position: relative;
+    width: 300px;
+    top: 110px;
+    left: -260px;
+    align-items: stretch;
+    padding: 30px;
+    padding-left: 100px;
+    transition: all 0.3s;
+    input {
+        width: 130px;
+        height: 40px;
+        outline: none;
+        border-radius: 10px 10px 10px 10px;
+        padding: 4px;
+        transition: box-shadow 0.2s;
+
+        &:focus {
+            box-shadow: lightgray 0px 0px 2px;
+        }
+        &::placeholder {
+            user-select: none;
+        }
+    }
+}
+
+.lucecita {
+    background-color: rgb(209, 221, 99);
+}
+
+.colapso {
+    left: -80px;
+}
+
+.colapso-bt {
+    left: 205px;
+}
+.eliminado{
+    display: none;
+}
+
+.invisible {
+    opacity: 0;
+    z-index: 1;
 }

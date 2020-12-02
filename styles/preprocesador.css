@@ -31,7 +31,8 @@
   left: 25px;
   z-index: 10;
   align-items: center;
-  justify-items: center; }
+  justify-items: center;
+  transition: left 0.3s; }
   .p2 .arrow {
     display: flex;
     height: 30px;
@@ -43,15 +44,70 @@
     align-items: center;
     justify-items: center;
     border-radius: 7px 7px 7px 7px; }
-    .p2 .arrow div {
+    .p2 .arrow button {
       clip-path: polygon(100% 50%, 0 0, 0 100%);
+      position: absolute;
       background: white;
       height: 15px;
       width: 15px;
       z-index: 20;
       margin: 0 auto;
-      transition: all 0.1s; }
+      transition: all 0.1s;
+      outline: none;
+      border: none;
+      left: 17px; }
+    .p2 .arrow .n2 {
+      position: absolute;
+      clip-path: polygon(0 50%, 100% 100%, 100% 0);
+      background: white;
+      height: 15px;
+      width: 15px;
+      margin: 0 auto;
+      transition: all 0.1s;
+      outline: none;
+      border: none;
+      z-index: 20; }
     .p2 .arrow:active {
       border-color: lightgray; }
-      .p2 .arrow:active div {
+      .p2 .arrow:active button {
         background: lightgray; }
+
+.buscador {
+  display: flex;
+  height: 180px;
+  background-color: #272727;
+  position: relative;
+  width: 300px;
+  top: 110px;
+  left: -260px;
+  align-items: stretch;
+  padding: 30px;
+  padding-left: 100px;
+  transition: all 0.3s; }
+  .buscador input {
+    width: 130px;
+    height: 40px;
+    outline: none;
+    border-radius: 10px 10px 10px 10px;
+    padding: 4px;
+    transition: box-shadow 0.2s; }
+    .buscador input:focus {
+      box-shadow: lightgray 0px 0px 2px; }
+    .buscador input::placeholder {
+      user-select: none; }
+
+.lucecita {
+  background-color: #d1dd63; }
+
+.colapso {
+  left: -80px; }
+
+.colapso-bt {
+  left: 205px; }
+
+.eliminado {
+  display: none; }
+
+.invisible {
+  opacity: 0;
+  z-index: 1; }
