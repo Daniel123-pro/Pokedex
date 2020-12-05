@@ -1,3 +1,5 @@
+import pokemon_maker from "./file_maker.js"
+
 const d = document;
 const buscador = d.querySelector(".buscador");
 const boton_colapso = d.querySelector(".p2");
@@ -6,6 +8,7 @@ const boton_1 = d.querySelector(".n1");
 
 d.addEventListener("click",e => {
     if(e.target.matches(".arrow .n1")){
+        pokemon_maker();
         e.target.classList.add("invisible");
         e.target.classList.add("eliminado");
 
