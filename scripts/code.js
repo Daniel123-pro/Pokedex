@@ -5,10 +5,10 @@ const buscador = d.querySelector(".buscador");
 const boton_colapso = d.querySelector(".p2");
 const boton_2 = d.querySelector(".n2");
 const boton_1 = d.querySelector(".n1");
+const lista = d.querySelector(".gallery");
 
 d.addEventListener("click",e => {
     if(e.target.matches(".arrow .n1")){
-        pokemon_maker();
         e.target.classList.add("invisible");
         e.target.classList.add("eliminado");
 
@@ -39,4 +39,7 @@ d.addEventListener("click",e => {
             boton_1.classList.remove("invisible");
         },400)
     }
-})
+});
+
+lista.appendChild(pokemon_maker("Ditto","normal","assets/Ditto.png",`sygcacisysgdcfs`));
+lista.appendChild(pokemon_maker("Charmander","fuego","assets/Charmander.png",`fuegito`));

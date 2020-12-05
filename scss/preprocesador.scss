@@ -141,9 +141,9 @@
     display: grid;
     position: relative;
     grid-template-rows: repeat(auto-fill,minmax(250px,1fr));
-    grid-template-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-template-columns: repeat(auto-fill,minmax(180px,1fr));
     grid-auto-rows: repeat(auto-fill,minmax(250px,1fr));
-    grid-auto-columns: repeat(auto-fill,minmax(150px,1fr));
+    grid-auto-columns: repeat(auto-fill,minmax(180px,1fr));
     grid-column-gap: 10px;
     grid-row-gap: 20px;
     height: 1000px;
@@ -152,7 +152,38 @@
     z-index: 1;
     top: 60px;
     padding: 20px;
-    div {
-        background-color: lightgreen;
+}
+
+.ficha {
+    display: flex;
+    border-radius: 10px 10px 10px 10px;
+    border: 5px double $color_fichas;
+    flex-direction: column;
+    background-color: $partes_oscuras;
+    box-sizing: content-box;
+    .nombre {
+        height: 30px;
+        background-color: $color_fichas;
+        flex-grow: 1;
+        text-align: center;
+        text-justify: center;
+        user-select: none;
     }
+    .pokemon {
+        box-sizing: content-box;
+        object-fit: cover;
+        width: 100%;
+        flex-grow: 1;
+        height: 50%;
+    }
+}
+
+.ficha_2 {
+    flex-grow: 2;
+    background-color: $color_fichas;
+    box-sizing: content-box;
+    width: 100%;
+    word-wrap: break-word;
+    user-select: none;
+    text-align: center;
 }
