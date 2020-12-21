@@ -41,6 +41,50 @@ d.addEventListener("click",e => {
     }
 });
 
-lista.appendChild(pokemon_maker("Ditto","normal","assets/Ditto.png","popo"));
-lista.appendChild(pokemon_maker("Charmander","fuego","assets/Charmander.png",`fuegito`));
-lista.appendChild(pokemon_maker("Gastly","Fantasma","assets/Gastly.png","pedo"));
+buscador.addEventListener("keyup", e => {
+    let cartas = Array.prototype.slice.call(d.querySelectorAll(".ficha"));
+    let personaje = buscador.querySelector("input").value;
+
+    for(let i = 0; i < cartas.length;i++){
+        if(cartas[i].querySelector("h2").textContent.toUpperCase().indexOf(personaje.toUpperCase()) != -1){
+            cartas[i].classList.remove("invisible");
+
+            setTimeout(() => {
+                cartas[i].classList.remove("finvisible");
+            }, 300);
+        }
+        else{
+            cartas[i].classList.add("finvisible");
+
+            setTimeout(() => {
+                cartas[i].classList.add("invisible");
+            }, 300);
+        }
+    }
+
+})
+
+d.addEventListener("DOMContentLoaded",e => {
+    let cartas = Array.prototype.slice.call(d.querySelectorAll(".ficha"));
+
+    for(let i = 0; i < cartas.length;i++){
+        cartas[i].addEventListener("click", e => {
+            cartas[i].classList.add("sobre");
+            cartas[i].classList.add("sobre-color-borde");
+            cartas[i].querySelector(".nombre").classList.add("sobre-color");
+            cartas[i].querySelector(".descripcion").classList.add("sobre-color");
+
+            setTimeout(() => {
+                cartas[i].classList.remove("sobre");
+                cartas[i].classList.remove("sobre-color-borde");
+                cartas[i].querySelector(".nombre").classList.remove("sobre-color");
+                cartas[i].querySelector(".descripcion").classList.remove("sobre-color");
+            }, 1000)
+        })
+    }
+});
+
+lista.appendChild(pokemon_maker("Ditto","normal","assets/Ditto.png","Ditto es un Pokémon de tipo normal introducido en la primera generación."));
+lista.appendChild(pokemon_maker("Charmander","fuego","assets/Charmander.png",`Charmander es un Pokémon de tipo fuego introducido en la primera generación.`));
+lista.appendChild(pokemon_maker("Gastly","Fantasma","assets/Gastly.png","Gastly es un Pokémon tipo fantasma/veneno introducido en la primera generación."));
+lista.appendChild(pokemon_maker("Scyther","Bicho","assets/Scyther.png","Scyther es un Pokémon de tipo bicho/volador introducido en la primera generación."));

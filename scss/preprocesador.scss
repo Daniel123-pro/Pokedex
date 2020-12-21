@@ -22,7 +22,7 @@
     height: 200px;
     width: 30px;
     top:100px;
-    left: -10px;
+    left: -28px;
     z-index: 10;
 }
 
@@ -34,7 +34,7 @@
     width: 50px;
     background-color: $color-standar;
     top:100px;
-    left: 25px;
+    left: 5px;
     z-index: 10;
     align-items: center;
     justify-items: center;
@@ -94,7 +94,7 @@
     position: fixed;
     width: 300px;
     top: 110px;
-    left: -260px;
+    left: -280px;
     align-items: stretch;
     padding: 30px;
     padding-left: 100px;
@@ -146,12 +146,13 @@
     grid-auto-columns: repeat(auto-fill,minmax(180px,1fr));
     grid-column-gap: 10px;
     grid-row-gap: 20px;
-    height: 1000px;
+    height: 100%;
     width: 100%;
     margin: 0 auto;
     z-index: 1;
     top: 60px;
     padding: 20px;
+    padding-left:60px;
 }
 
 .ficha {
@@ -161,30 +162,55 @@
     flex-direction: column;
     background-color: $partes_oscuras;
     box-sizing: content-box;
+    transition: all 0.3s;
     .nombre {
-        height: 30px;
+        height: 20%;
         background-color: $color_fichas;
-        flex-grow: 1;
         text-align: center;
         text-justify: center;
         user-select: none;
         padding-top: 7%;
+        transition: all 0.3s;
     }
     .pokemon {
         box-sizing: content-box;
         object-fit: contain;
         width: 100%;
-        flex-grow: 1;
-        height: 50%;
+        height: 40%;
+        border-radius: 10px 10px 10px 10px;
     }
 }
 
 .descripcion {
-    flex-grow: 2;
     background-color: $color_fichas;
     box-sizing: content-box;
-    width: 100%;
-    word-wrap: break-word;
     user-select: none;
     text-align: center;
+    padding: 20px 10px;
+    height: 40%;
+    transition: all 0.3s;
+}
+
+.finvisible {
+    opacity: 0;
+}
+
+.invisible {
+    display: none;
+}
+
+.sobre {
+    z-index: 1000;
+    box-shadow: 5px 5px 0px black;
+    position: relative;
+    left: -5px;
+    top: -5px;
+}
+
+.sobre-color {
+    background-color:rgb(245, 41, 41);
+}
+
+.sobre-color-borde {
+    border: 5px double rgb(245, 41, 41);
 }
