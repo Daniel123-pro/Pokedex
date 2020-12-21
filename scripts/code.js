@@ -41,5 +41,6 @@ d.addEventListener("click",e => {
     }
 });
 
-lista.appendChild(pokemon_maker("Ditto","normal","assets/Ditto.png",`sygcacisysgdcfs`));
+lista.appendChild(pokemon_maker("Ditto","normal","assets/Ditto.png","popo"));
 lista.appendChild(pokemon_maker("Charmander","fuego","assets/Charmander.png",`fuegito`));
+lista.appendChild(pokemon_maker("Gastly","Fantasma","assets/Gastly.png","pedo"));

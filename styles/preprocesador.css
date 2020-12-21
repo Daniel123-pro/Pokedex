@@ -144,15 +144,16 @@
     flex-grow: 1;
     text-align: center;
     text-justify: center;
-    user-select: none; }
+    user-select: none;
+    padding-top: 7%; }
   .ficha .pokemon {
     box-sizing: content-box;
-    object-fit: cover;
+    object-fit: contain;
     width: 100%;
     flex-grow: 1;
     height: 50%; }
 
-.ficha_2 {
+.descripcion {
   flex-grow: 2;
   background-color: #e43636;
   box-sizing: content-box;
